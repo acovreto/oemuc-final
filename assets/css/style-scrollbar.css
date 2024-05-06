@@ -1,0 +1,15 @@
+:root {
+  --portokaleva: #f39520;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--portokaleva);
+}

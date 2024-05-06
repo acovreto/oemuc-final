@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/curosel.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== CSS ===============-->
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/style-scrollbar.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="../../assets/js/google-translate.js"></script>
+
+    <title>За Нас</title>
+    <style>
+      body{
+        overflow: auto;
+      }
+      .naslov {
+        margin-top: 100px;
+        text-align: center;
+        color: #f39520;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+      }
+      .pozadina {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 102%;
+        height: 102%;
+        filter: blur(10px);
+        z-index: -10;
+      }
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+      .zanas{
+        color: white;
+        background-color: hsl(220, 20%, 18%);
+      }
+      .roboto-thin {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      .roboto-light {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .roboto-regular {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .roboto-bold {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .roboto-black {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      .roboto-thin-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      .roboto-light-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .roboto-regular-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .roboto-medium-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      .roboto-bold-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .roboto-black-italic {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+      }
+      :root {
+        --portokaleva: #f39520;
+      }
+
+      ::-webkit-scrollbar {
+        width: 15px;
+      }
+      .belapozadina {
+        background-color: white;
+        background-color: hsl(220, 20%, 18%);
+        position: absolute;
+        width: 71%;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="index.html" class="logo"
+            ><img src="./assets/img/logo.png" alt="" style="height: 7vh"
+          /></a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="../../index.html" class="nav__link"
+                ><i class="ri-home-2-line"></i>Почетна</a
+              >
+            </li>
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                  id="Graduation-Cap--Streamline-Core"
+                  height="14"
+                  width="14"
+                >
+                  <desc>
+                    Graduation Cap Streamline Icon: https://streamlinehq.com
+                  </desc>
+                  <g id="graduation-cap--graduation-cap-education">
+                    <path
+                      id="Rectangle 645"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7 1.36743 6.5 2.81629L7 7 0.5 4.18372 7 1.36743Z"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Ellipse 346"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m3.44922 5.46851 0.00644 3.0642S4.52881 9.95288 6.9997 9.95288s3.5498 -1.42017 3.5498 -1.42017l-0.0007 -3.0642"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Ellipse 347"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M1.69531 10.6013V4.71069"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Vector"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M1.69594 12.9932c0.6605 0 1.19594 -0.5354 1.19594 -1.1959s-0.53544 -1.196 -1.19594 -1.196S0.5 11.1368 0.5 11.7973s0.53544 1.1959 1.19594 1.1959Z"
+                      stroke-width="1"
+                    ></path>
+                  </g>
+                </svg>
+                Струки <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a
+                    href="../../pages/struki/index-elektro.html"
+                    class="dropdown__link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      class="bi bi-laptop"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"
+                      />
+                    </svg>
+                    Електротехничка Струка
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../../pages/struki/index-masinska.html"
+                    class="dropdown__link"
+                  >
+                    <!-- <i class="ri-user-line"></i>  -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-gear-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+                      />
+                    </svg>
+
+                    Машинска Струка
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../../pages/struki/index-soobrajkanjo.html"
+                    class="dropdown__link"
+                  >
+                    <!-- <i class="ri-user-line"></i>  -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-car-front"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276"
+                      />
+                      <path
+                        d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z"
+                      />
+                    </svg>
+
+                    Сообраќајна Струка
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../../pages/struki/index-licni-uslugi.html"
+                    class="dropdown__link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-person-standing-dress"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z"
+                      />
+                    </svg>
+
+                    Лични Услуги
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                  id="Quality-Education--Streamline-Core"
+                  height="14"
+                  width="14"
+                >
+                  <desc>
+                    Quality Education Streamline Icon: https://streamlinehq.com
+                  </desc>
+                  <g id="quality-education">
+                    <path
+                      id="Vector 367"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.99985 6.54628c-0.74737 -0.55297 -1.86876 -1.52065 -5.08286 -1.52065v6.92407c3.2141 0 4.33549 0.9677 5.08286 1.5207V6.54628Z"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Vector 368"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7.00027 6.54628c0.74737 -0.55297 1.86876 -1.52065 5.08283 -1.52065v6.92407c-3.21407 0 -4.33546 0.9677 -5.08283 1.5207V6.54628Z"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Vector 1242"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10.7631 0.52124H4.08617c-0.18653 0 -0.36935 0.052176 -0.52779 0.15063l-1.7576 1.09217 1.7576 1.09216c0.15844 0.09846 0.34126 0.15063 0.52779 0.15063h6.67693c0.6864 0 1.2428 -0.55641 1.2428 -1.24279 0 -0.68638 -0.5564 -1.2428 -1.2428 -1.2428Z"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Vector 1243"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.98584 0.574707V3.00687"
+                      stroke-width="1"
+                    ></path>
+                  </g>
+                </svg>
+                Настава <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a
+                    href="../../pages/vraboteni/index-rakovoden-tim.html"
+                    class="dropdown__link"
+                  >
+                    <!-- <i class="ri-user-line"></i>  -->
+
+                    Раководен Тим
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../../pages/vraboteni/index-strucni-aktivi.html"
+                    class="dropdown__link"
+                  >
+                    <!-- <i class="ri-user-line"></i>  -->
+
+                    Стручни активи
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../../pages/vraboteni/index-administrativen-kadar.html"
+                    class="dropdown__link"
+                  >
+                    <!-- <i class="ri-user-line"></i>  -->
+
+                    Административен кадар
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="../../pages/vesti/index-vesti.html" class="nav__link"
+                ><i class="ri-file-list-3-line"></i>Вести</a
+              >
+            </li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  id="Laptop-Project-Screen--Streamline-Sharp"
+                  height="14"
+                  width="14"
+                >
+                  <desc>
+                    Laptop Project Screen Streamline Icon:
+                    https://streamlinehq.com
+                  </desc>
+                  <g id="laptop-project-screen">
+                    <path
+                      id="Vector 2590"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      d="M18.0167 14.1879H22.9395V1.0605H5.4363V5.9833"
+                      stroke-width="1.5"
+                    ></path>
+                    <path
+                      id="Rectangle 475"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      d="M3.2484 17.4698H15.2819V8.7181H3.2484V17.4698Z"
+                      stroke-width="1.5"
+                    ></path>
+                    <path
+                      id="Vector 1432"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      d="M3.2484 17.4698L1.0605 22.9395H17.4698L15.2818 17.4698"
+                      stroke-width="1.5"
+                    ></path>
+                  </g>
+                </svg>
+                Проекти <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="../proekti/BalkanJunior.html"" class="dropdown__link"> Балкан Јуниор </a>
+                </li>
+
+                <li>
+                  <a href="#" class="dropdown__link">
+                    Училични спортски проекти
+                  </a>
+                </li>
+
+                <!--=============== DROPDOWN SUBMENU ===============-->
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    Еразмус Проекти
+                    <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="#" class="dropdown__sublink"> DigitalVET </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown__subitem">
+                  <div class="dropdown__link">
+                    Е twinning проекти 2023-2024
+                    <i class="ri-add-line dropdown__add"></i>
+                  </div>
+
+                  <ul class="dropdown__submenu">
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        Water as a source of life
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        Interaktivne funkcije u STEM-u
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        Let's fight for a better world
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink"> Game not waste </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        Be kind, be a role model
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        Read what you eat
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        NOW (Nature often welcomes)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        Let's shape our dreams with Tinkercad
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        The sky is the limit - motivation to learn
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        Multidisciplinary STEM Skills
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__sublink">
+                        Are you ready for change?
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="nav__link"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                  id="Camera-1--Streamline-Core"
+                  height="14"
+                  width="14"
+                >
+                  <desc>
+                    Camera 1 Streamline Icon: https://streamlinehq.com
+                  </desc>
+                  <g
+                    id="camera-1--photos-picture-camera-photography-photo-pictures"
+                  >
+                    <path
+                      id="Vector"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.5 5c0 -0.26522 -0.1054 -0.51957 -0.2929 -0.70711C13.0196 4.10536 12.7652 4 12.5 4h-2L9 2H5L3.5 4h-2c-0.26522 0 -0.51957 0.10536 -0.707107 0.29289C0.605357 4.48043 0.5 4.73478 0.5 5v6c0 0.2652 0.105357 0.5196 0.292893 0.7071C0.98043 11.8946 1.23478 12 1.5 12h11c0.2652 0 0.5196 -0.1054 0.7071 -0.2929S13.5 11.2652 13.5 11V5Z"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Vector_2"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 9.75c1.24264 0 2.25 -1.00736 2.25 -2.25S8.24264 5.25 7 5.25 4.75 6.25736 4.75 7.5 5.75736 9.75 7 9.75Z"
+                      stroke-width="1"
+                    ></path>
+                  </g>
+                </svg>
+                Галерија</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav__link"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                  id="Building-2--Streamline-Core"
+                  height="14"
+                  width="14"
+                >
+                  <desc>
+                    Building 2 Streamline Icon: https://streamlinehq.com
+                  </desc>
+                  <g id="building-2--real-home-tower-building-house-estate">
+                    <path
+                      id="Vector"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.5 13.5h-8V4l4 -3.5 4 3.5v9.5Z"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Vector_2"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.5 13.5h5v-7h-5"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Vector_3"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 13.5v-2"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Vector_4"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 8.5h3"
+                      stroke-width="1"
+                    ></path>
+                    <path
+                      id="Vector_5"
+                      stroke="rgba(255, 255, 255, 0.7)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 5.5h3"
+                      stroke-width="1"
+                    ></path>
+                  </g>
+                </svg>
+                За Нас</a
+              >
+            </li>
+            <li>
+              <div class="nav__data nav__link">
+                <div class="logo">
+                  <img
+                    src="../../assets/img/lang/lang__mk.png"
+                    alt="mk"
+                    data-google-lang="mk"
+                    class="language__img"
+                    width="24"
+                    height="16"
+                  />
+                </div>
+                <div class="logo nav__link">
+                  <img
+                    src="../../assets/img/lang/lang__en.png"
+                    alt="mk"
+                    data-google-lang="en"
+                    class="language__img"
+                    width="24"
+                    height="16"
+                  />
+                </div>
+                <div class="logo nav__link">
+                  <img
+                    src="../../assets/img/lang/lang__de.png"
+                    alt="mk"
+                    data-google-lang="de"
+                    class="language__img"
+                    width="24"
+                    height="16"
+                  />
+                </div>
+                <div class="logo nav__link">
+                  <img
+                    src="../../assets/img/lang/al.jpg"
+                    alt="al"
+                    data-google-lang="sq"
+                    class="language__img"
+                    width="24"
+                    height="16"
+                  />
+                </div>
+                <div class="logo nav__link">
+                  <img
+                    src="../../assets/img/lang/tur.png"
+                    alt="mk"
+                    data-google-lang="tr"
+                    class="language__img"
+                    width="24"
+                    height="16"
+                  />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h1 class="naslov">
+    
+        <b><h1>За Нас</h1></b>
+      
+    </h1>
+    <img
+      src="../../assets/img/struki-sliki/oemuc.jpg"
+      alt="ОЕМУЦ"
+      class="pozadina"
+    />
+    <div class="belapozadina zanas">
+      <h2>
+       
+          Развојниот пат на Општинскиот Електромашински Училиштен Центар „Св.
+          Наум Охридски“ од Охрид започнува во учебната 1966/1967 година како
+          резултат на стопанската ориентација на општина Охрид. Наставата во
+          почетокот се изведувала во 4 паралелки од металска струка со 140
+          ученици и наставен кадар од 4 професори и 3 хонорарни инжинери.
+       
+      </h2>
+      <h2>
+       
+          Центарот беше формиран со цел да подготвува кадри од металската насока
+          за потребите на металската индустрија во градот како што беа фабриката
+          „Братство“, фабриката за автомобилски делови и алати „Херој Тоза
+          Драговиќ“ и фабриката „Езерка“.
+      
+      </h2>
+      <h2>
+      
+          Иако во последните 50 години се случуваат големи промени и предизвици,
+          сепак нашиот центар од самите почетоци до денес успешно ја извршува
+          својата општествена мисија.
+      
+      </h2>
+      <h2>
+   
+          Развојот на науката, техниката и технологијата придонесува до брзо
+          развивање на електроиндустријата во општина Охрид, така што во
+          учебната 1973/74 година металскиот училиштен центар беше верифициран и
+          за образование на кадри од електротехничката струка од што произлегува
+          и променат на името на центарот во Електромашински со образовни
+          профили од двете струки од трет и четврти степен. Во периодот од 1985
+          до 1988 година центарот се проширува и се здобива со нов училиштен
+          простор и нова опрема со што дополнително се подобруваат условите за
+          изведување на воспитно образовната дејност.
+      
+      </h2>
+      <h2>
+       
+          Средното училиште „Св. Наум Охридски“ од година во година постојано
+          расте и се развива. Во учебната 2006/2007 година се воведува
+          сообраќајната струка со образовниот профил-техничар за патен
+          сообраќај.
+      
+      </h2>
+      <h2>
+     
+          Во учебната 2009/2010 година во Електромашинскиот Училиштен Центар
+          „Св. Наум Охридски“ се воведува и струката Лични услуги со образовниот
+          профил-ко  </center>
+      </h2>
+      <h2>
+      
+          Следејќи ги потребите на стопанството од добро образуване стручен
+          кадар од учебната 2018/2019 година во Електромашинскиот Училиштен
+          Центар „Св. Наум Охридски“ во соработка со компаниите „Костал“, „ОДВ
+          Електрик“ и „ЛТХ Леарница“ започна со работа и пилот паралелка во
+          дуално образование во електротехничката струка за профилот „Техничар
+          за индустриска мехатроника“, за да од учебната 2019/2020 година се
+          формира уште една паралелка во дуално образование во машинската струка
+          за профилот „Техничар за производно машинство“.
+      
+      </h2>
+      <h2>
+       
+          Во своето постоење Општинскиот Електромашински Училиштен Центар „Св.
+          Наум Охридски“ е добитник на бројни награди и признанија за својот
+          раст и развој. Во 1987 година на центарот му е доделена наградата
+          „7-ми Ноември“, највисокото признание на град Охрид за особено
+          значајни остварување во областа на техничката култура од посебен
+          интерес за општина Охрид. Истата година ја добива и златната плакета
+          од работната организација „Галеб“ во знак на признание и благодарност
+          за големите заслуги и успешната соработка. Советот на „Средбите и
+          деновите на просветните работници на Република Македонија“ во 1990
+          година го награди центарот со мини библиотека како најуспешен во
+          Република Македонија од средното образование.
+       
+      </h2>
+      <h2>
+       
+          Во рамките на воспитно-образованта дејност треба да се истакне
+          учеството на ОЕМУЦ „Св. Наум Охридски“ на државни и меѓународни
+          натпревари. Така нашите ученици со успех учествуваат на државните
+          натпревари за средни стручни училишта за учениците од трета година
+          како и на државниот натпревар „Лидер на струка“ каде што во 2014,
+          2016, 2017 и 2018 година е прогласено за Лидер во сообраќајната
+          струка, во 2015 година беше лидер во електротехничката струка, а во
+          2018 година и Лидер на машинската струка во Република Македонија.
+       
+      </h2>
+      <h2>
+      
+          Треба да се забележи дека започнувајќи од 2015 година, ОЕМУЦ „Св. Наум
+          Охридски“ е дел од меѓународниот натпревар „Балкан Јуниор“ каде нашите
+          ученици се натпреваруваат со учениците од средните стручни училишта од
+          Истанбул (Турција), Велење (Словенија), Ваљево (Србија), Тешањ (Босна
+          и Херцеговина), Лабин (Хрватска), Никшиќ (Црна Гора) и Констанца
+          (Романија), при што во 2019 година беше и домаќин на Седмиот натпревар
+          „Балкан Јуниор“. На овие натпревари во 2015, 2016 и 2019 година го
+          ОЕМУЦ „Св. Наум Охридски“ го освои третото место.
+      
+      </h2>
+      <h2>
+     
+          ОЕМУЦ „Св. Наум Охридски“ активно соработува со средни стручни
+          училишта од другите центри. Во таа насока во 2019 година се потпиша
+          меморандум за соработка со Техничкото училиште од Ваљево, Република
+          Србија со што се продлабочија врските со ова училиште преку посета на
+          професори, ученици и заедничко учество во проекти.
+      
+      </h2>
+      <h2>
+       
+          За подобрување на условите за вршење на воспитно-образовната дејност
+          во 2019 година се изгради и новата спортска сала со што се обезбедија
+          одлични услови за одржување на часовите по спорт и спортски
+          активности.
+     
+      </h2>
+    </div>
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>

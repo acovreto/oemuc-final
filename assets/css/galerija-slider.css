@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.pozadina {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 102%;
+  height: 102%;
+
+  filter: blur(10px);
+  z-index: -1;
+}
+.galerija-container {
+  z-index: 100;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200vh;
+  width: 100%;
+  margin-top: 8rem;
+  gap: 10vh;
+}
+.galerija-wrapper {
+  height: 90vh;
+  width: 80vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem 5rem 5rem;
+  border-radius: 5rem;
+}
+.galerija-wrapper h1 {
+  color: orange;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.galerija-img {
+  width: 70vw !important;
+  height: 460px;
+  object-fit: cover;
+  aspect-ratio: 30/10;
+}
+
+.galerija {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 550px;
+  width: 70vw;
+  overflow: hidden;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.galerija-btn {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  width: 49.5%;
+}
+
+.galerija-btn:hover {
+  opacity: 0.9;
+}
+
+.galerija-btn:focus {
+  outline: none;
+}
