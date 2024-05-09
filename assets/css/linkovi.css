@@ -1,0 +1,53 @@
+.linkovi-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.plaketa,
+.korisni-linkovi {
+  flex: 50%;
+  padding: 5%;
+}
+.plaketa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+.plaketa img {
+  transform-origin: left;
+  transition: transform 0.7s ease-in-out;
+}
+.plaketa img:hover {
+  transform: scale(2.5);
+}
+.korisni-linkovi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+.link-img {
+  margin-bottom: 2%;
+}
+.korisni-linkovi img {
+  transition: all 0.3s ease-in-out;
+  opacity: 0.8;
+}
+.korisni-linkovi img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  .linkovi-container {
+    flex-direction: column;
+  }
+  .plaketa,
+  .korisni-linkovi {
+    flex: 100%;
+    padding: 5%;
+  }
+}

@@ -15,30 +15,28 @@
 .SD_Background {
   width: 100%;
 
-  margin-top: 6.5%;
   margin-bottom: 5%;
   background-color: #e0e0e0;
   background-color: var(--black-color-lighten) !important;
 
-  height: 80vh;
   position: relative;
 
   left: 50%;
   transform: translate(-50%, 0);
 }
 .SD_container {
-  margin-left: 1.5%;
-  margin-right: 1.5%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: stretch;
+
   width: inherit;
-  height: inherit;
 }
 
 .SD_StrukaContainer {
-  width: 24.25%;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
+  padding: 5%;
 }
 .SD_StrukaContainer:nth-child(1) {
   background-color: #f2951e;
@@ -100,4 +98,15 @@
 .SC_Text ol {
   list-style: disc;
   font-size: 40;
+}
+@media only screen and (max-width: 800px) {
+  .SD_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .SD_container {
+    grid-template-columns: 1fr;
+  }
 }
